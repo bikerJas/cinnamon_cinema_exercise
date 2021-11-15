@@ -1,4 +1,4 @@
-const ticketAvailability = require("./seatAllocation.js");
+const seats = require("./seatAllocation.js");
 
 function tickets(bookings){
 
