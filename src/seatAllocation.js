@@ -1,5 +1,5 @@
-function seats(requested){
-
+function seats(requested, available){
+   
 };
 
 module.exports = seats;
