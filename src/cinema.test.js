@@ -37,3 +37,13 @@ describe("tickets", () => {
       expect(tickets(ticket, seating)).toBe("Seat A5 B1 allocated");
     });
   });
+
+  describe("Not able to allocate all seats in request", () => {
+    test("test returns error in allocation fulfillment", () => {
+    //arrange
+    const seating = ["C4","C5"];
+    const ticket = 3;
+      //act and assert
+      expect(tickets(ticket, seating)).toBe("Unable to allocate all seats in request");
+    });
+  });
