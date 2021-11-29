@@ -1,10 +1,14 @@
 function seats(requested, available) {
-  let message = "Seat ";
-  for (let x = 0; x < requested; x++) {
-    message += available[x] + " ";
+  let message = "";
+  if (available.length < requested) {
+    message = "Unable to allocate all seats in request";
+  } else {
+    message = "Seat ";
+    for (let x = 0; x < requested; x++) {
+      message += available[x] + " ";
+    }
+    message += "allocated";
   }
-  message += "allocated";
-
   return message;
 }
 
