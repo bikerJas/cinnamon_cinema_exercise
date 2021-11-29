@@ -27,3 +27,13 @@ describe("tickets", () => {
       expect(tickets(ticket, seating)).toBe("Seat A1 A2 allocated");
     });
   });
+
+  describe("Allocation of seats between two rows", () => {
+    test("test returns seat numbers A5 and B1 when 2 tickets requested and seats A1-A4 are taken", () => {
+    //arrange
+    const seating = ["A5","B1","B2","B3","B4","B5","C1","C2","C3","C4","C5"];
+    const ticket = 2;
+      //act and assert
+      expect(tickets(ticket, seating)).toBe("Seat A5 B1 allocated");
+    });
+  });
